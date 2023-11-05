@@ -1,0 +1,14 @@
+<div>
+    <p>Name: {{ name }}</p>
+    <p>Surname: {{ surname }}</p>
+    <p>Age: {{ age >= 18 ? "Mayor de edad" : "Menor de edad" }}</p>
+    <p>Company: {{ company.value }}</p>
+    <label for="Company">Introduce your company: </label>
+    <input type="text" id=Company #company (keyup)="0" [disabled]="disableInput">
+    <br>
+    <br>
+    <label for="Register">Registered: </label>
+    <input type="checkbox" id="Register" [checked]="userRegistered" (click)="setUserToRegistered()">
+
+    {{getUserRegistration()}}
+</div>
